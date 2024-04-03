@@ -23,7 +23,9 @@ jobs:
         distribution: 'adopt'
 
     - name: Compile Java files
-      run: javac HelloWorld.java
+      run: |
+        javac HelloWorld.java
+        javac HelloWorldTest.java
 
     - name: Run tests
       run: java -cp . HelloWorldTest
